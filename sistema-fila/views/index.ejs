@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     Sistema de Atendimento
 
     <script>
-
         function proximo() {
             window.location.href = "/proximo";
         }
@@ -19,18 +18,14 @@
 </head>
 
 <body style="font-family: Arial, Helvetica, sans-serif;">
-
     <div style="display: flex; flex-direction: column; height: 300px; margin: auto;">
-
         <div style="flex: 10;font-size: 100px;width: 200px; text-align: center; margin: auto;">
-            <%= senhaAtual %>
+            <p style="font-size: 20px;">Senha atual:</p>
+            <%= senha_atual %>
         </div>
-
-
-        <div style="flex: 1; padding: 10px;">
-            <%= (fila==null ? "" : fila) %>
+        <div style="flex: 1; padding: 15px;">
+            Próximas senhas: <%= (fila_senhas==null ? "" : fila_senhas) %>
         </div>
-
         <div style="border: solid 1px; flex: 1;">
             <div style="display: flex; background-color: darkgrey; padding: 10px;">
 
@@ -43,23 +38,17 @@
 
             </div>
         </div>
-
         <div style="flex: 1;">
             <div style="display: flex; width: 100%;padding: 10px;">
 
                 <div style="flex: 1; text-align: center;">
-                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="proximo()">Chamar próximo</button>
+                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="proximo()">Próxima senha</button>
                 </div>
                 <div style="flex: 1;text-align: center;">
-                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="retirarSenha()">Retirar
-                        Senha</button>
+                    <button style="padding-top: 5px;padding-bottom: 5px;" onclick="retirarSenha()">Retirar senha</button>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </body>
-
 </html>
